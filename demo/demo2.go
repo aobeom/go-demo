@@ -58,7 +58,7 @@ func GroupByAge(sw StudentWrapper) (data []StudentGroup) {
 
 	for i < dataLen {
 		j = i + 1
-		if j < dataLen && studentData[i].Age == studentData[j].Age {
+		for j < dataLen && studentData[i].Age == studentData[j].Age {
 			j++
 		}
 		dataGroupList = append(dataGroupList, studentData[i:j])
@@ -82,10 +82,13 @@ func Demo2() {
 	var sw StudentWrapper
 
 	student := []Student{
+		{"陈一", 66, 16},
+		{"钱二", 87, 14},
 		{"张三", 75, 15},
 		{"李四", 85, 16},
 		{"王五", 100, 14},
 		{"赵六", 77, 15},
+		{"周七", 99, 15},
 	}
 
 	sw.StudentSlice = student
