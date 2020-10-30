@@ -10,7 +10,5 @@
 1. 可控制数量的并行
 
 ## tools
-+ 数据类型转换 dataconv
-+ 文件操作 filectl
-+ HTTP 请求 minireq
-+ 时间转换timeconv
+1. [minireq](https://github.com/aobeom/minireq)
+2. [minitools](https://github.com/aobeom/minitools)
