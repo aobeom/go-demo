@@ -4,7 +4,6 @@ import (
 	"go-demo/demo"
 )
 
-
 func main() {
-	demo.Demo2()
+	demo.Demo1()
 }
