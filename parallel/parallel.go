@@ -43,7 +43,8 @@ func TaskBoard(runner func(task interface{}) interface{}, tasks []interface{}, w
 		go func() {
 			defer taskCfg.Control.Done()
 			// 执行任务
-			taskCfg.Results <- runner(<-taskCfg.Workers)
+			taskCfg.Results <- runner(task)
+			<-taskCfg.Workers
 		}()
 	}
 
